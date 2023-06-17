@@ -5,11 +5,11 @@
 
 :custom
 clear custom_choice
-menu This is a Test Menu
+menu Test1
 item --gap This is the first sub menu
-item option_one ${space} Loading a kernel and initrd
-item option_two ${space} Loading an ISO
-item --gap This is a second sub menu
+item option_one ${space} test1
+item option_two ${space} test2
+item --gap Test Japanese! あいうえお！
 item option_three ${space} This is option three
 choose custom_choice || goto custom_exit
 echo ${cls}
@@ -28,5 +28,4 @@ initrd http://path.to/iso
 boot || goto custom_exit
 
 :custom_exit
-chain utils.ipxe
 exit
