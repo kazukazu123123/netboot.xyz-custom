@@ -6,8 +6,9 @@
 :custom
 clear custom_choice
 menu Windows
-item --gap Windows10
-item Win10_NoAnniversary ${space} Windows10 NoAnniversary
+item --gap Windows8.1
+item WinEmbedded8.1_IndustryPro ${space} WinEmbedded8.1_IndustryPro
+item --gap test
 item option_two ${space} test2
 item option_three ${space} This is option three
 choose custom_choice || goto custom_exit
@@ -15,9 +16,9 @@ echo ${cls}
 goto ${custom_choice}
 goto custom_exit
 
-:Win10_NoAnniversary
+:WinEmbedded8.1_IndustryPro
 kernel https://boot.netboot.xyz/memdisk iso raw
-initrd https://piroma.net/index.php/s/T7idrrwYqqzBbjc/download/Win10_NoAnniversary.iso
+initrd https://piroma.net/index.php/s/q2fpdFpaoB84Fpz/download/WindowsEmbedded%208.1%20IndustryPro%20x64_4050333.iso
 boot
 boot || goto custom_exit
 
