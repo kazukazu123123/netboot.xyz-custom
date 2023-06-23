@@ -6,20 +6,12 @@
 :custom
 clear custom_choice
 menu kazukazu123123
-item --gap Windows8.1
-item WinEmbedded8.1_IndustryPro ${space} WinEmbedded8.1_IndustryPro
 item --gap test
 item arch_linux ${space} Arch Linux
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
 goto custom_exit
-
-:WinEmbedded8.1_IndustryPro
-kernel https://boot.netboot.xyz/memdisk iso raw
-initrd https://piroma.net/index.php/s/q2fpdFpaoB84Fpz/download/WindowsEmbedded%208.1%20IndustryPro%20x64_4050333.iso
-boot
-boot || goto custom_exit
 
 :arch_linux
 kernel https://boot.netboot.xyz/memdisk raw iso
