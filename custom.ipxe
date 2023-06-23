@@ -5,12 +5,11 @@
 
 :custom
 clear custom_choice
-menu Windows
+menu kazukazu123123
 item --gap Windows8.1
 item WinEmbedded8.1_IndustryPro ${space} WinEmbedded8.1_IndustryPro
 item --gap test
-item option_two ${space} test2
-item option_three ${space} This is option three
+item arch_linux ${space} Arch Linux
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
@@ -22,9 +21,9 @@ initrd https://piroma.net/index.php/s/q2fpdFpaoB84Fpz/download/WindowsEmbedded%2
 boot
 boot || goto custom_exit
 
-:option_two
+:arch_linux
 kernel https://boot.netboot.xyz/memdisk raw iso
-initrd http://path.to/iso
+initrd http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/iso/2023.06.01/archlinux-2023.06.01-x86_64.iso
 boot || goto custom_exit
 
 :custom_exit
