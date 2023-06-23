@@ -5,21 +5,20 @@
 
 :custom
 clear custom_choice
-menu Test1
-item --gap This is the first sub menu
-item option_one ${space} test1
+menu Windows
+item --gap Windows10
+item Win10_NoAnniversary ${space} Windows10 NoAnniversary
 item option_two ${space} test2
-item --gap Test Japanese! あいうえお！
 item option_three ${space} This is option three
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
 goto custom_exit
 
-:option_one
-kernel http://path.to/vmlinuz
-initrd http://path.to/initrd
-imgargs vmlinuz put_kernel_img_args_here
+:Win10_NoAnniversary
+kernel https://boot.netboot.xyz/memdisk iso raw
+initrd https://piroma.net/index.php/s/T7idrrwYqqzBbjc/download/Win10_NoAnniversary.iso
+boot
 boot || goto custom_exit
 
 :option_two
