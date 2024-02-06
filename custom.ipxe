@@ -6,7 +6,7 @@
 :custom
 clear custom_choice
 menu kazukazu123123
-item --gap test
+item --gap Arch Linux
 item arch_linux ${space} Arch Linux (x86_64)
 choose custom_choice || goto custom_exit
 echo ${cls}
