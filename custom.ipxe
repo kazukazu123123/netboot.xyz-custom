@@ -7,7 +7,7 @@
 clear custom_choice
 menu kazukazu123123
 item --gap Arch Linux
-item arch_linux ${space} Arch Linux (x86_64)
+item arch_linux ${space} Arch Linux (x86_64) (ISO) (Japan mirror)
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
