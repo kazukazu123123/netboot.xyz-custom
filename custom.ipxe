@@ -14,8 +14,8 @@ goto ${custom_choice}
 goto custom_exit
 
 :arch_linux
-kernel {{ memdisk_location }} raw iso
-initrd https://mirror.hashy0917.net/archlinux/iso/latest/archlinux-x86_64.iso
+kernel https://mirror.hashy0917.net/archlinux/iso/latest/arch/boot/x86_64/vmlinuz-linux
+initrd https://mirror.hashy0917.net/archlinux/iso/latest/arch/boot/x86_64/initramfs-linux.img
 boot || goto custom_exit
 
 :custom_exit
