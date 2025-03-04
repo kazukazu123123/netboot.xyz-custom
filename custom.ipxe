@@ -14,15 +14,13 @@ goto ${custom_choice}
 goto custom_exit
 
 :arch_linux
-
+set base-url https://mirror.hashy0917.net/archlinux/iso/latest
 set mirrorurl https://mirror.hashy0917.net/archlinux/
 
-kernel ${mirrorurl}/arch/boot/x86_64/vmlinuz-linux
-initrd ${mirrorurl}/arch/boot/x86_64/initramfs-linux.img
+kernel ${mirrorurl}arch/boot/x86_64/vmlinuz-linux arich=true ip=dhcp net.ifnames=0 consoleblank=0 
+initrd ${mirrorurl}arch/boot/x86_64/initramfs-linux.img
 
 imgargs vmlinuz-linux initrd=initramfs-linux.img ip=dhcp archiso_http_srv=${mirrorurl} archisobasedir=arch
-boot
-
 boot || goto custom_exit
 
 :custom_exit
