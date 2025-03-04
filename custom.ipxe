@@ -15,7 +15,7 @@ goto custom_exit
 
 :arch_linux
 imgtrust
-set mirrorurl http://mirror.rackspace.com/archlinux/
+set mirrorurl https://mirror.hashy0917.net/archlinux/
 kernel ${mirrorurl}iso/latest/arch/boot/x86_64/vmlinuz-linux
 imgverify vmlinuz-linux ${mirrorurl}iso/latest/arch/boot/x86_64/vmlinuz-linux.ipxe.sig
 initrd ${mirrorurl}iso/latest/arch/boot/amd-ucode.img
